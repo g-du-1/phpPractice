@@ -8,26 +8,29 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-  <title>Simple form with GET</title>
+  <title>Simple form with POST</title>
 </head>
 
 <body>
   <div class="container w-25">
-    <h1>Simple form with GET</h1>
+    <h1>Simple form with POST</h1>
     <br>
 
-    <!-- GET is not secure, use POST for sensitive data -->
+    <!-- 
+    GET is not secure, use POST for sensitive data 
+    TODO Sanitize and filter
+    -->
 
-    <form action="formGet.php" method="get">
+    <form action="formPost.php" method="post">
       <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" name="name" class="form-control" id="name" placeholder="Enter name">
+        <label for="name">Password</label>
+        <input type="text" name="password" class="form-control" id="password" placeholder="Enter password">
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 
     <br>
-    <p>Result: <?php echo $_GET["name"] ?></p>
+    <p>Result: <?php echo $_POST["password"] ?></p>
   </div>
 
 
