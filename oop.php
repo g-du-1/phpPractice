@@ -33,7 +33,7 @@
     }
 
     public static function getAgeLimit() {
-      return self::$ageLimit;
+      return self::$ageLimit.'<br>';
     }
   }
 
